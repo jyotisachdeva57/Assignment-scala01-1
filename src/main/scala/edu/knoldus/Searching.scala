@@ -5,24 +5,23 @@ class Searching {
   def binarySearch(array: Array[Int], elem: Int): Boolean = {
     val right = array.length
     var left = 0
-    binarySrch(array, elem, 0, right - 1)
+    if(binarySrch(array, elem, 0, right - 1)== -1)
+      return false
     true
+
   }
 
 
   def linearSearch(array: Array[Int], elem: Int): Boolean = {
     if (array.isEmpty) {
-      println("list is empty")
       return false
     }
     else if (array.head == elem) {
-      println("element found")
       return true
     }
     else {
       for (lst <- array) {
         if (lst == elem) {
-          println("element found")
           return true
         }
       }
@@ -47,5 +46,5 @@ class Searching {
       return binarySrch(list, key, mid + 1, right)
     }
   }
-
+ -1
 }

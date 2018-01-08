@@ -19,8 +19,9 @@ class Sorting {
     for (i <- 0 until list.length - 1) {
       var minindx = i
       for (j <- (i + 1) until list.length) {
-        if (list(j) < list(minindx))
+        if (list(j) < list(minindx)) {
           minindx = j
+        }
       }
       if (i != minindx) {
         val swap = list(i);
